@@ -9,4 +9,16 @@ class CafeUtil {
         }
         return sum;
     }
+
+    public double getOrderTotal(double[]prices){
+        double total = 0;
+        for(double lineItems : prices){
+            total = total + lineItems;
+        }
+        return total;
+    }
+        // for(double i=0; i<=prices.length; i++){
+        //     total = total+prices[i];
+        // }
+        // return total;
 }
