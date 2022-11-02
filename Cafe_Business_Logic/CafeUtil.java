@@ -22,8 +22,11 @@ class CafeUtil {
 
 //view menu item
     public static void displayMenu(ArrayList<String>menuItems){
-        String name = menuItems.get(0); // to access an element in an ArrayList using an index
-        for (String menu: menuItems)
-            System.out.println(menu);
+        for (int index = 0; index < menuItems.size(); index++){
+            System.out.println(menuItems.get(index));
+        }
+        //below also works but does not display index number
+        // for (String menu: menuItems)
+        //     System.out.println(menu);
     }
 }
