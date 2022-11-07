@@ -46,14 +46,37 @@ public class BankAccount {
     }
 
 //method to allow a user to deposit in savings or checkings and track the total money
-    public double makeDeposit(double checkingBalance, double savingsBalance){
-        double totalMoney = setCheckingBalance + setSavingsBalance;
-        return totalMoney;
+    public void makeDeposit(double amount, String typeOfAccount){
+        //check which account
+        //increment checking balance
+        //else increment savings balance
+        //increment total balance
+        if (typeOfAccount == "checking"){
+            this.checkingBalance += amount;
+        }
+        else{
+            this.savingsBalance += amount;
+        }
+        this.totalMoney += amount;
     }
 
 //method to withdraw money and make sure there are sufficient funds
-    public double withdrawMoney(double withdraw){
-        if double withdraw <=0
+    public void withdrawMoney(double amount, String typeOfAccount){
+        if (typeOfAccount == "checking"){
+            if (amount > this.checkingBalance){
+                System.out.println("Insufficient funds");
+                return;
+            }
+            this.checkingBalance -= amount;
+        }
+        else{
+            if (amount > this.savingsBalance){
+                System.out.println("Insufficient funds");
+                return;
+            }
+            this.savingsBalance -= amount;
+        }
+        this.totalMoney -= amount;
     }
     
 
