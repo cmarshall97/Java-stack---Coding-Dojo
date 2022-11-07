@@ -8,5 +8,6 @@ class TestBankAccount {
         System.out.println("Checkings: " + account2.getCheckingBalance());
         System.out.println("Savings: " + account2.getSavingsBalance());
         System.out.println("Number of accounts: " + BankAccount.getNumOfAccounts());
+        System.out.println("Total Balance: " + account2.makeDeposit(100.00,50.00));
     }
 }
